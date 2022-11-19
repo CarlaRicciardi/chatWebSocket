@@ -1,10 +1,10 @@
 {{!-- FORMULARIO INGRESO PRODUCTO --}}
 <section class='p-4 bg-light'>
   <h1 class='text-secondary text-center'>Ingrese una fruta</h1>
-  <form action='/productos' method='POST'>
+  <form onsubmit="return false">
     <div class='mb-3'>
       <label class='form-label fw-bold text-secondary fs-3' for='name'>Nombre:</label>
-      <input id="inputTitle" class='form-control' type='text' name='title' required />
+      <input id="inputTitle" class='form-control' type='text' name='title' required/>
     </div>
     <div class='mb-3'>
       <label class='form-label fw-bold text-secondary fs-3' for='price'>Precio:</label>
@@ -56,7 +56,7 @@
 {{!-- CENTRO DE MENSAJES --}}
 <section class='p-4 bg-light'>
   <h1 class='text-secondary text-center'>Centro de Mensajes</h1>
-  <form>
+  <form onsubmit="return false">
     <input id='input-email' placeholder='diego@outlook.com' />
     <div id='fullChat'></div>
     <input id='input-msg' placeholder='Ingresá un mensaje' />

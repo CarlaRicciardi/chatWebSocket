@@ -14,7 +14,7 @@ const sendProd = () => {
   document.getElementById('title').value = '';
   document.getElementById('price').value = '';
   document.getElementById('thumbnail').value = '';
-  return false;
+  return;
 };
 
 const render = (data) => {
@@ -40,8 +40,9 @@ const fyh = new Date().toLocaleDateString() + new Date().toTimeString();
 const sendMsg = () => {
   const email = document.getElementById('input-email').value;
   const msgParaEnvio = document.getElementById('input-msg').value;
-  socket.emit('newMsg', { email: email, fyh: fyh ,mensaje: msgParaEnvio });
+  socket.emit('newMsg', { email: email, fyh: fyh, mensaje: msgParaEnvio });
   document.getElementById('input-msg').value = '';
+  return;
 };
 
 const chatRender = (data) => {
@@ -60,7 +61,6 @@ const chatRender = (data) => {
   });
   document.getElementById('fullChat').innerHTML = html;
 };
-
 
 socket.on('msgs', (data) => {
   chatRender(data);
